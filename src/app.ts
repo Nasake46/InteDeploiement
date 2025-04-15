@@ -1,5 +1,7 @@
 import http from "http";
 import fs from "fs";
+const port = process.env.PORT || 4000;
+
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
     const html = `
@@ -28,6 +30,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(process.env.PORT, () => {
+server.listen(port, () => {
   console.log("Server is running on port " + process.env.PORT);
 });
