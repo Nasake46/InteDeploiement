@@ -27,14 +27,14 @@
     "globals": "^16.0.0",
     "nodemon": "^3.1.9",
     "prettier": "^3.5.3",
-    "ts-jest": "^29.3.2",
-    "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.29.1"
   },
   "dependencies": {
     "http": "^0.0.1-security",
     "jest": "^29.7.0",
-    "sass": "^1.86.3"
+    "sass": "^1.86.3",
+    "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2"
   }
 }
