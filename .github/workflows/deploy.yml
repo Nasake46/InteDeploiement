@@ -1,0 +1,49 @@
+name: Deploy Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+      branches:
+        - main
+
+jobs:
+  deploy-service:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Render CLI
+        run: curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/heads/main/bin/install.sh | sh
+      
+      - name: Create Deploy
+        env:
+          RENDER_API_KEY: 
+          CI: true
+        run: |
+          render deploys create  --output json --confirm
+        
+                - name: Checkout code 
+          uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with: 
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build SASS
+        run: npm run sass:build
+
+      - name: Lint 
+        run: npm run lint
+
+      - name: Prettier 
+        run: npm run prettier:check
+
+      - name: TS build
+        run: npm run tsc:build
+
+      - name: Run tests
+        run: npm run test
