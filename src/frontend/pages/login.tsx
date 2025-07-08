@@ -20,7 +20,7 @@ export default function Login() {
       setErrorMsg(error.message);
     } else {
       setErrorMsg('');
-      navigate('/profile'); // ou autre route
+      navigate('/home'); // ou autre route
     }
   };
 
