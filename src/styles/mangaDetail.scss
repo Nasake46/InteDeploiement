@@ -1,0 +1,69 @@
+.manga-detail {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  img {
+    width: 220px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    max-width: 100%;
+  }
+
+  strong {
+    font-weight: 600;
+    color: #111;
+  }
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+    align-items: flex-start;
+
+    img {
+      margin-right: 2rem;
+    }
+
+    div {
+      flex: 1;
+    }
+  }
+
+.back-button {
+  margin-top: 2rem;
+  padding: 10px 18px;
+  background-color: #374151;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #1f2937;
+  }
+}
+
+}

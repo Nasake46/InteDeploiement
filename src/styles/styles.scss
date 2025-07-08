@@ -15,3 +15,12 @@
         cursor: pointer;
     }
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #e0e0e0, #2c3e50); // tu peux personnaliser
+  font-family: sans-serif;
+}

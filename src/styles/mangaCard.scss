@@ -1,0 +1,25 @@
+.manga-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

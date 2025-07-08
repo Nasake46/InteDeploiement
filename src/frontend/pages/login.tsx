@@ -25,7 +25,8 @@ export default function Login() {
   };
 
   return (
-    <div style={{ padding: '2rem' }}>
+    <div className='auth-page'>
+      <div className='auth-card'>
       <h1>Connexion</h1>
       <form onSubmit={handleLogin}>
         <div>
@@ -38,7 +39,11 @@ export default function Login() {
         </div>
         <button type="submit">Se connecter</button>
       </form>
+      <p style={{ marginTop: '1rem', textAlign: 'center' }}>
+             Pas encore de compte ? <a href="/signup">Créer un compte</a>
+        </p>
       {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}
+      </div>  
     </div>
   );
 }
