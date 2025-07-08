@@ -1,14 +1,22 @@
-import express from 'express';
-import dotenv from 'dotenv';
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 
-dotenv.config();
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello from backend');
+// Hack pour utiliser __dirname avec ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Sert les fichiers du frontend
+app.use(express.static(path.join(__dirname, "../../frontend")));
+
+// Fallback : index.html (pour React Router)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../frontend/index.html"));
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });

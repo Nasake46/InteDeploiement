@@ -14,3 +14,19 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
+
+.profile-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 10px 16px;
+  background-color: #1f2937;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #111827;
+  }
+}

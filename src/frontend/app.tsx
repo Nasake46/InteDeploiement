@@ -3,6 +3,7 @@ import Signup from './pages/signup'
 import Login from './pages/login'
 import Home from './pages/home'
 import MangaDetail from './pages/mangaDetail'
+import Profile from './pages/profile'
 import TestSupabase from './components/testSupabase'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/manga/:id" element={<MangaDetail />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   )
